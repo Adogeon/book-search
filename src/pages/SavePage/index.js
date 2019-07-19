@@ -1,7 +1,9 @@
 import React from "react"
+import Banner from "../../components/Banner"
+import BookList from "../../components/BookList"
 
 const SavePage = () => {
-    return(
+    return (
         <div className = "container">
             <Banner />
             <BookList label="Saved Books" />

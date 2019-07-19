@@ -1,6 +1,9 @@
 import React from "react";
+import Banner from "../../components/Banner"
+import SearchBar from "../../components/SearchBar"
+import BookList from "../../components/BookList"
 
-const SearchPage = () => {
+function SearchPage() {
     return(
         <div className="container">
             <Banner/>
