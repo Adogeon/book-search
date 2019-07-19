@@ -29,6 +29,7 @@ app.get("/api/books", (req,res)=>{
 
 /// Add book to DB
 app.post("/api/books", (req, res)=>{
+    console.log(req)
     const newBooks = req.body;
     db.create(newBooks)
         .then((dbNewBook) => {

@@ -1,13 +1,13 @@
 import React from "react"
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return(
-        <form>
+        <form onSubmit={props.onSearchSubmit}>
             <h2>Book Search</h2>
-            <label for="searchTerm">Book: </label>
-            <input type="text" name="searchTerm"></input>
-            <button type="submit">Search</button>
+            <label htmlFor="searchTerm">Book: </label>
+            <input type="text" name="searchTerm" onChange={props.onTextChange}></input>
+            <button type="submit" onSubmit={props.onSearchSubmit}>Search</button>
         </form>
     )
 }
