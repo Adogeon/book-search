@@ -15,13 +15,24 @@ class SavePage extends React.Component {
     loadBooks() {
         API.getBooks()
            .then(res=> this.setState({ books:res.data}))
+           .catch(err => console.log(err))
+    }
+
+    handleRemoveBook( bookId) {
+        API.removeBook (bookId)
+           .then(res => this.loadBooks())
+           .catch(err => console.log(err))
+    }
+
+    componentDidMount() {
+        this.loadBooks()
     }
 
     render() {
         return (
             <div className="container">
                 <Banner />
-                <BookList label="Saved Books" />
+                <BookList label="Saved Books" data={this.state.books} />
             </div>
         )
     }

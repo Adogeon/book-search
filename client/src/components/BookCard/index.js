@@ -15,7 +15,7 @@ const BookCard = (props)=>{
                 <img src={props.data.image} alt="bookImage"/>
                 <p>{props.data.description}</p>
                 <a className="button" href={props.data.link}>View</a>
-                <button className="button" onClick={()=>{props.saveBook(props.data)}}> Save </button>
+                <button className="button" onClick={()=>{props.doSomethingToBook(props.data)}}> Save </button>
                 
             </div>
     )

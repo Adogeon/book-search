@@ -7,7 +7,7 @@ const BookList = (props)=> {
             <h3>{props.label}</h3>
             {
                 props.data.map(
-                    bookData => <BookCard data={bookData} saveBook={props.onSaveBook}/>
+                    bookData => <BookCard data={bookData} doSomethingToBook={props.onClickButton}/>
                 )
             }
         </div>
