@@ -15,7 +15,16 @@ const BookCard = (props)=>{
                 <img src={props.data.image} alt="bookImage"/>
                 <p>{props.data.description}</p>
                 <a className="button" href={props.data.link}>View</a>
-                <button className="button" onClick={()=>{props.doSomethingToBook(props.data)}}> Save </button>
+                <button className="button"
+                        reload = {props.reload}
+                        onClick={()=>{
+                            props.onClickAction(
+                                props.buttonLabel === "Save" 
+                                ? props.data 
+                                : props.data._id)
+                            }}> 
+                    {props.buttonLabel} 
+                </button>
                 
             </div>
     )

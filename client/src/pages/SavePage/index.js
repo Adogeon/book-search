@@ -7,8 +7,7 @@ class SavePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            books:[],
-            bookToSave:{}
+            books:[]
         }
     }
 
@@ -18,9 +17,12 @@ class SavePage extends React.Component {
            .catch(err => console.log(err))
     }
 
-    handleRemoveBook( bookId) {
-        API.removeBook (bookId)
-           .then(res => this.loadBooks())
+    handleRemoveBook(bookId) {
+        API.removeBook(bookId)
+           .then(res => {
+               console.log(this)
+                document.reload()}
+               )
            .catch(err => console.log(err))
     }
 
@@ -32,7 +34,7 @@ class SavePage extends React.Component {
         return (
             <div className="container">
                 <Banner />
-                <BookList label="Saved Books" data={this.state.books} />
+                <BookList label="Saved Books" data={this.state.books} handleBook={this.handleRemoveBook} buttonLabel="Remove" reload={this.loadBooks()}/>
             </div>
         )
     }

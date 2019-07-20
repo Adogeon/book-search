@@ -51,7 +51,7 @@ class SearchPage extends React.Component {
             <div className="container">
                 <Banner />
                 <SearchBar onTextChange={this.handleInputChange} onSearchSubmit={this.handleFormSubmit}/>
-                <BookList label="Result List" data={this.state.books} onClickButton={this.handleSaveBook}/>
+                <BookList label="Result List" data={this.state.books} handleBook={this.handleSaveBook} buttonLabel="Save"/>
             </div>
         )
     }
