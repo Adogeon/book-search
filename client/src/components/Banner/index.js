@@ -1,11 +1,14 @@
 import React from "react"
+import "./style.css"
 
 class Banner extends React.Component {
     render() {
         return (
-        <div className = "jumbotron" >
-                <h1>(React) Google Books Search</h1>
-                <p> Search for and Save Books of Interest</p>
+        <div className = "jumbotron mb-2 rounded-0 d-flex flex-row justify-content-end" style={{backgroundImage:`url(./banner.jpg)`}}>
+            <div className="col-6">
+                <h1 className="text-gray">(React) Google Books Search</h1>
+                <p className="text-gray"> Search for and Save Books of Interest</p>
+            </div>
         </div>
         )
     }

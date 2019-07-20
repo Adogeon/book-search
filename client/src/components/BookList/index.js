@@ -3,8 +3,9 @@ import BookCard from "../BookCard"
 
 const BookList = (props)=> {
     return(
-        <div>
-            <h3>{props.label}</h3>
+        <div className="card mt-2">
+            <div className="card-body">
+            <h2 className="card-title">{props.label}</h2>
             {
                 props.data.map(
                     bookData => <BookCard 
@@ -14,6 +15,7 @@ const BookList = (props)=> {
                         reload={props.reload}/>
                 )
             }
+            </div>
         </div>
     )
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import Banner from "../../components/Banner"
 import SearchBar from "../../components/SearchBar"
 import BookList from "../../components/BookList"
 import API from "../../ultis/API";
@@ -49,7 +48,6 @@ class SearchPage extends React.Component {
     render() {
         return (
             <div className="container">
-                <Banner />
                 <SearchBar onTextChange={this.handleInputChange} onSearchSubmit={this.handleFormSubmit}/>
                 <BookList label="Result List" data={this.state.books} handleBook={this.handleSaveBook} buttonLabel="Save"/>
             </div>

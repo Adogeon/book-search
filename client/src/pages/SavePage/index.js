@@ -1,5 +1,4 @@
 import React from "react"
-import Banner from "../../components/Banner"
 import BookList from "../../components/BookList"
 import API from "../../ultis/API";
 
@@ -33,7 +32,6 @@ class SavePage extends React.Component {
     render() {
         return (
             <div className="container">
-                <Banner />
                 <BookList label="Saved Books" data={this.state.books} handleBook={this.handleRemoveBook} buttonLabel="Remove" reload={this.loadBooks()}/>
             </div>
         )

@@ -1,20 +1,19 @@
 import React from "react"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
+import "./style.css"
 
 const NavBar = ({...props})=>{
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <h1 className="nav-brand text-light">Google Book Search</h1>
-            <NavLink className="nav-link" 
-                         to="/" 
-                         activeClassName="active">
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+            <div className="text-light nav-brand ">Google Book Search</div>
+            <Link className="nav-link" 
+                         to="/" >
                     Search
-            </NavLink>
-            <NavLink className="nav-link" 
-                         to="/saved" 
-                         activeClassName="active">
+            </Link>
+            <Link className="nav-link" 
+                         to="/saved" >
                     Saved
-            </NavLink>
+            </Link>
         </nav>
     )
 }
